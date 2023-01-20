@@ -12,7 +12,7 @@ public class Personal {
         this.teilzeitgehalt = teilzeitgehalt;
     }
 
-    public void displayAttributes() {
+    public void displayAttributesPersonal() {
         System.out.println("Vollzeit oder Teilzeit: " + VoT);
         System.out.println("Name: " + namepersonal);
         System.out.println("Vollzeitgehalt: " + vollzeitgehalt);
@@ -54,14 +54,13 @@ public class Personal {
         teilzeitgehalt = teilzeitgehalt;
     }
 
-                    public static void main (String[]args){
+                   /* public static void main (String[]args){
 
                         if (Futter = 0) {
                             System.out.println("Tier muss noch gefüttert werden.");
                         } else if (Futter == !0) {
                             System.out.println("Tier wurde schon gefüttert.");
-                        }
+                        }*/
 
 
                     }
-                }

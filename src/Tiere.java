@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Tiere {
     private String Typ;
     private String Name;
@@ -17,9 +19,9 @@ public class Tiere {
     }
 
     public void displayAttributes() {
-        System.out.println("Typ: " + Typ);
+        System.out.println("\nTyp: " + Typ);
         System.out.println("Name: " + Name);
-        System.out.println("\nArt: " + Art);
+        System.out.println("Art: " + Art);
         System.out.println("Anzahl: " + Anzahl);
         System.out.println("Nahrung?: " + Nahrung);
         System.out.println("Gewicht?: " + Gewicht);
@@ -43,19 +45,15 @@ public class Tiere {
     }
 
     public void setArt(String Art) {
-        Art = Art;
+        this.Art = Art;
     }
 
     public String getArt() {
         return Art;
     }
 
-    public double getAnzahl() {
-        return Anzahl;
-    }
-
     public void setNahrung(String Nahrung) {
-        Nahrung = Nahrung;
+        this.Nahrung = Nahrung;
     }
 
     public String getNahrung() {
@@ -63,7 +61,7 @@ public class Tiere {
     }
 
     public void setGewicht(double Gewicht) {
-        Gewicht = Gewicht;
+        this.Gewicht = Gewicht;
     }
 
     public double getGewicht() {
@@ -74,4 +72,5 @@ public class Tiere {
     public Tiere(String Typ, String Name, String Art, int Anzahl, String Nahrung, double Gewicht) {
         setAttributes(Typ, Name, Art, Anzahl, Nahrung, Gewicht);
     }
+
 }
