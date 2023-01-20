@@ -16,8 +16,7 @@ public class Futter {
     public void displayAttributesFutter() {
         System.out.println("\nTyp: " + typ);
         System.out.println("Name: " + menge);
-        System.out.println("Wurde das Tier schon gefüttert: " + schongefüttert);
-    }
+        System.out.println("Wurde das Tier schon gefüttert: " + schongefüttert);}
 
     public void settyp(String typ) {
         typ = typ;
@@ -43,9 +42,8 @@ public class Futter {
     public void getschongefüttert(boolean schongefüttert) {
         this.schongefüttert = schongefüttert;
     }
-
     public Futter(String typ, String menge, boolean schongefüttert) {
-        setAttributesFutter(typ, menge, schongefüttert);
-    }
+        setAttributesFutter(typ, menge,schongefüttert);
 
+}
 }

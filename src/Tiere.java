@@ -7,6 +7,9 @@ public class Tiere {
     private int Anzahl;
     private String Nahrung;
     private double Gewicht;
+    private String typ;
+    private String menge;
+    private boolean schongefüttert;
 
 
     private void setAttributes(String Typ, String Name, String Art, int Anzahl, String Nahrung, double Gewicht) {
@@ -26,7 +29,6 @@ public class Tiere {
         System.out.println("Nahrung?: " + Nahrung);
         System.out.println("Gewicht?: " + Gewicht);
     }
-
 
 
     public void setTyp(String Typ) {

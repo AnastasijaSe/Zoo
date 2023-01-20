@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +19,18 @@ public class Main {
 
         Tiere Ziege1 = new Tiere("Ziege", "Sandra", "Säugetier", 1, "Pflanzenfresser", 60);
 
-        Tiere Ziege2 = new Tiere("Säugetier", "Emine", "Pflanzenfresser", 1, "Pflanzenfresser", 80);
+        Tiere Ziege2 = new Tiere("Ziege", "Eminen", "Säugetier", 1, "Pflanzenfresser", 80);
+
+        Tiere Pinguin1 = new Tiere("Pinguin", "Cihad", "Säugetier", 1, "Pflanzenfresser", 80);
+
+
+        Futter Azra = new Futter("Fleisch","erwachsen",true);
+        Futter Rolle = new Futter("Fleisch","erwachsen",true);
+        Futter Ronja = new Futter("Fleisch, Fisch","erwachsen",true);
+        Futter Sandra = new Futter("Pflanzen, Trockenfutter","jung",false);
+        Futter Eminen = new Futter("Pflanzen, Trockenfutter","jung",false);
+        Futter Cihad = new Futter("Pflanzen","jung",false);
+
 
 
         ArrayList<Tiere> TierArray = new ArrayList<>();
@@ -28,6 +40,7 @@ public class Main {
         TierArray.add(Schlange1);
         TierArray.add(Ziege1);
         TierArray.add(Ziege2);
+        TierArray.add(Pinguin1);
 
         for(Tiere t : TierArray){
             t.displayAttributes();
@@ -46,7 +59,6 @@ public class Main {
         }
         System.out.println("Säugetieranzahl: "+Säugetieranzahl);
 
-
         ArrayList<Personal> PersonalArray = new ArrayList<>();
 
         PersonalArray.add(Person1);
@@ -60,5 +72,48 @@ public class Main {
         PersonalArray.size();
         System.out.println("\nInsgesamt gibt es: "+PersonalArray.size()+" Arbeiter");
 
+
+        Scanner futterscann = new Scanner(System.in);
+        System.out.println("Möchtest du den Fütterungsstand von einem Tier einsehen? (ja, nein): ");
+        String eingabeFutter = futterscann.next();
+        if(eingabeFutter.equals("nein")){
+            System.out.println("Ok");
+        }
+        else if(eingabeFutter.equals("ja")){
+            System.out.println("Von welchem Tier Möchtest du den Fütterungsstandeinsehen? \n (Löwe, Ziege, Schlange, Pinguin): ");
+            String eingabeTier = futterscann.next();
+            if(eingabeTier.equals("Löwe")){
+                System.out.printf("Wähle Löwe nach Name aus (Azra, Rolle): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Azra")){
+                    Azra.displayAttributesFutter();}
+                else if(eingabeTierName.equals("Rolle")){
+                        Rolle.displayAttributesFutter();
+                }
+            }
+            if(eingabeTier.equals("Schlange")){
+                System.out.printf("Wähle Schlange nach Name aus (Ronja): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Ronja")){
+                    Ronja.displayAttributesFutter();
+                }
+            }
+            if(eingabeTier.equals("Ziege")){
+                System.out.printf("Wähle Ziege nach Name aus (Sandra, Eminen): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Sandra")){
+                    Sandra.displayAttributesFutter();}
+                else if(eingabeTierName.equals("Eminen")){
+                    Eminen.displayAttributesFutter();
+                }
+        }
+            if(eingabeTier.equals("Pinguin")){
+                System.out.printf("Wähle Pinguin nach Name aus (Cihad): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Cihad")){
+                    Cihad.displayAttributesFutter();}
+                }
+
     }
+}
 }
