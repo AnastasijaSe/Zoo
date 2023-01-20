@@ -54,40 +54,36 @@ public class Main {
         Scanner tierscanner = new Scanner(System.in);
         System.out.println("\nMöchtest du die Daten von den Tieren einsehen? (ja, nein): ");
         String tiereingabe = tierscanner.next();
-        if(tiereingabe.equals("ja")) {
-        for(Tiere t : TierArray){
-        for (Tiere t : TierArray) {
-            t.displayAttributes();
-        }
-
-        TierArray.size();
-        System.out.println("\nInsgesamt gibt es: " + TierArray.size() + " Tiere");
-
-
-        int Säugetieranzahl = 0;
-
-        for (int i = 0; i < TierArray.size(); i++) {
-            if (TierArray.get(i).getArt().equals("Säugetier")) {
-                Säugetieranzahl++;
+        if (tiereingabe.equals("ja")) {
+            for (Tiere t : TierArray) {
+                t.displayAttributes();
             }
-        }
-        System.out.println("Säugetieranzahl: " + Säugetieranzahl);
+
+            TierArray.size();
+            System.out.println("\nInsgesamt gibt es: " + TierArray.size() + " Tiere");
 
 
-        int Reptilienanzahl=0;
+            int Säugetieranzahl = 0;
 
-        for(int i=0; i<TierArray.size(); i++){
-            if(TierArray.get(i).getArt().equals("Reptiel")){
-                Reptilienanzahl++;
+            for (int i = 0; i < TierArray.size(); i++) {
+                if (TierArray.get(i).getArt().equals("Säugetier")) {
+                    Säugetieranzahl++;
+                }
             }
-        }
-        System.out.println("Reptilienanzahl: "+Reptilienanzahl);}
+            System.out.println("Säugetieranzahl: " + Säugetieranzahl);
 
-        else if(tiereingabe.equals("nein")){
+
+            int Reptilienanzahl = 0;
+
+            for (int i = 0; i < TierArray.size(); i++) {
+                if (TierArray.get(i).getArt().equals("Reptiel")) {
+                    Reptilienanzahl++;
+                }
+            }
+            System.out.println("Reptilienanzahl: " + Reptilienanzahl);
+        } else if (tiereingabe.equals("nein")) {
             System.out.println("ok");
         }
-
-
 
 
         ArrayList<Personal> PersonalArray = new ArrayList<>();
@@ -96,22 +92,18 @@ public class Main {
         PersonalArray.add(Person2);
         PersonalArray.add(Person3);
 
-        for (Personal p : PersonalArray) {
-            p.displayAttributesPersonal();
-        }
         Scanner personscann = new Scanner(System.in);
         System.out.println("\nMöchtest du die Personendaten von den Mitarbeitern einsehen? (ja, nein): ");
         String personeingabe = personscann.next();
-        if(personeingabe.equals("ja")) {
+        if (personeingabe.equals("ja")) {
             for (Personal p : PersonalArray) {
                 p.displayAttributesPersonal();
             }
 
-        PersonalArray.size();
-        System.out.println("\nInsgesamt gibt es: " + PersonalArray.size() + " Arbeiter");
             PersonalArray.size();
-        }
-        else if(personscann.equals("nein")){
+            System.out.println("\nInsgesamt gibt es: " + PersonalArray.size() + " Arbeiter");
+            PersonalArray.size();
+        } else if (personscann.equals("nein")) {
             System.out.println("ok");
         }
 
@@ -119,104 +111,92 @@ public class Main {
         Scanner futterscann = new Scanner(System.in);
         System.out.println("\nMöchtest du den Fütterungsstand von einem Tier einsehen? (ja, nein): ");
         String eingabeFutter = futterscann.next();
-        if(eingabeFutter.equals("nein")){
+        if (eingabeFutter.equals("nein")) {
             System.out.println("Ok");
-        }
-        else if(eingabeFutter.equals("ja")){
+        } else if (eingabeFutter.equals("ja")) {
             System.out.println("Von welchem Tier Möchtest du den Fütterungsstandeinsehen? \n (Löwe, Ziege, Schlange, Pinguin): ");
             String eingabeTier = futterscann.next();
-            if(eingabeTier.equals("Löwe")){
+            if (eingabeTier.equals("Löwe")) {
                 System.out.printf("Wähle Löwe nach Name aus (Azra, Rolle): ");
                 String eingabeTierName = futterscann.next();
-                if(eingabeTierName.equals("Azra")){
-                    Azra.displayAttributesFutter();}
-                else if(eingabeTierName.equals("Rolle")){
-                        Rolle.displayAttributesFutter();
+                if (eingabeTierName.equals("Azra")) {
+                    Azra.displayAttributesFutter();
+                } else if (eingabeTierName.equals("Rolle")) {
+                    Rolle.displayAttributesFutter();
                 }
             }
-            if(eingabeTier.equals("Schlange")){
+            if (eingabeTier.equals("Schlange")) {
                 System.out.printf("Wähle Schlange nach Name aus (Ronja): ");
                 String eingabeTierName = futterscann.next();
-                if(eingabeTierName.equals("Ronja")){
+                if (eingabeTierName.equals("Ronja")) {
                     Ronja.displayAttributesFutter();
                 }
             }
-            if(eingabeTier.equals("Ziege")){
+            if (eingabeTier.equals("Ziege")) {
                 System.out.printf("Wähle Ziege nach Name aus (Sandra, Eminen): ");
                 String eingabeTierName = futterscann.next();
-                if(eingabeTierName.equals("Sandra")){
-                    Sandra.displayAttributesFutter();}
-                else if(eingabeTierName.equals("Eminen")){
+                if (eingabeTierName.equals("Sandra")) {
+                    Sandra.displayAttributesFutter();
+                } else if (eingabeTierName.equals("Eminen")) {
                     Eminen.displayAttributesFutter();
                 }
-        }
-            if(eingabeTier.equals("Pinguin")) {
+            }
+            if (eingabeTier.equals("Pinguin")) {
                 System.out.printf("Wähle Pinguin nach Name aus (Cihad): ");
                 String eingabeTierName = futterscann.next();
                 if (eingabeTierName.equals("Cihad")) {
                     Cihad.displayAttributesFutter();
                 }
-                if(eingabeTierName.equals("Cihad")){
-                    Cihad.displayAttributesFutter();}}
-
+                if (eingabeTierName.equals("Cihad")) {
+                    Cihad.displayAttributesFutter();
+                }
             }
 
-            ArrayList<Tickets> TicketsArray = new ArrayList<>();
-
-            TicketsArray.add(Normal);
-            TicketsArray.add(Ermaessigt);
-
-        for (Tickets tk : TicketsArray) {
-            tk.displayAttributesTickets();
-            Tickets.summeTickets += tk.getanzahlverkauf();
         }
 
-        System.out.println("\nInsgesamt wurden " + Tickets.summeTickets + " verkauft");
-            Scanner ticketscann = new Scanner(System.in);
-            System.out.println("\nMöchtest du die Personendaten von den Mitarbeitern einsehen? (ja, nein): ");
-            String ticketeingabe = ticketscann.next();
-            if(ticketeingabe.equals("ja")) {
-            for(Tickets tk : TicketsArray){
+        ArrayList<Tickets> TicketsArray = new ArrayList<>();
+
+        TicketsArray.add(Normal);
+        TicketsArray.add(Ermaessigt);
+
         Scanner ticketPreis = new Scanner(System.in);
         System.out.println("\nMöchtest du die Preise für die Tickets einsehen? (ja, nein): ");
         String ticketpreis = ticketPreis.next();
-        if(ticketpreis.equals("ja")) {
-            for (Tickets tk : TicketsArray) {
-                tk.displayAttributesTickets();
-                Tickets.summeTickets += tk.getanzahlverkauf();}
+        if (ticketpreis.equals("ja")) {
+            Normal.displayAttributesTickets();
+            Ermaessigt.displayAttributesTickets();
+        } else if (ticketpreis.equals("nein")) {
+            System.out.println("ok");
         }
-        else if(ticketpreis.equals("nein")){
-            System.out.println("ok");}
 
 
-            Scanner ticket2scann = new Scanner(System.in);
-            System.out.println("\nMöchtest du noch ein Ticket kaufen? (ja, nein): ");
-            String ticketkauf = ticket2scann.next();
-            if(ticketkauf.equals("ja")) {
-                Scanner ticketAnzahlscann = new Scanner(System.in);
-                System.out.println("\nWie viele Tickets möchtest du kaufen? : ");
-                int ticketanzahl = ticketAnzahlscann.nextInt();
-                Tickets.summeTickets=(Tickets.summeTickets+ticketanzahl);
-                System.out.println("Neue Summe von verkauften Tickets:"+Tickets.summeTickets);
-                }
-            else if(ticketkauf.equals("nein")){
-                System.out.println("ok");}
-
-            }
+        Scanner ticket2scann = new Scanner(System.in);
+        System.out.println("\nMöchtest du noch ein Ticket kaufen? (ja, nein): ");
+        String ticketkauf = ticket2scann.next();
+        if (ticketkauf.equals("ja")) {
+            Scanner ticketAnzahlscann = new Scanner(System.in);
+            System.out.println("\nWie viele Tickets möchtest du kaufen? : ");
+            int ticketanzahl = ticketAnzahlscann.nextInt();
+            Tickets.summeTickets = (Tickets.summeTickets + ticketanzahl);
+            System.out.println("Neue Summe von verkauften Tickets:" + Tickets.summeTickets);
+        } else if (ticketkauf.equals("nein")) {
+            System.out.println("ok");
         }
-                Tickets.summeTickets += tk.getanzahlverkauf();
-            }
-            System.out.println("\nInsgesamt wurden "+Tickets.summeTickets+" verkauft");
-            }
+
+        System.out.println("\nInsgesamt wurden " + Tickets.summeTickets + " verkauft");
 
 
-            ArrayList<Shop> ShopArray = new ArrayList<>();
+        ArrayList<Shop> ShopArray = new ArrayList<>();
 
-            ShopArray.add(Kuscheltierklein);
-            ShopArray.add(Kuscheltiergross);
-            ShopArray.add(Magnet);
-            ShopArray.add(Tassen);
-            ShopArray.add(Streichelzoofutter);
+        ShopArray.add(Kuscheltierklein);
+        ShopArray.add(Kuscheltiergross);
+        ShopArray.add(Magnet);
+        ShopArray.add(Tassen);
+        ShopArray.add(Streichelzoofutter);
+
+        System.out.println("\nMöchtest du das Shop Angebot sehen (ja, nein): ");
+        String shopAnsehen = ticket2scann.next();
+        if (shopAnsehen.equals("ja")) {
 
             for (Shop s : ShopArray) {
                 s.displayAttributesShop();
@@ -224,6 +204,23 @@ public class Main {
 
             ShopArray.size();
             System.out.println("\nFolgendes Sortiment gibt es: " + TierArray.size());
+            Scanner shopscanner = new Scanner(System.in);
+            System.out.println("\nWelches Produkt möchtest du kaufen? (Kuscheltier (klein), Kuscheltier (groß), Magnete, Tassen, Streichelzoofutter): ");
+            String shopeingabe = shopscanner.next();
+            if (shopeingabe.equals("Kuscheltiere (klein)")) {
+                Kuscheltierklein.displayAttributesShop();
+            } else if (shopeingabe.equals("Kuscheltiere (groß)")) {
+                Kuscheltiergross.displayAttributesShop();
+            } else if (shopeingabe.equals("Magnete")) {
+                Magnet.displayAttributesShop();
+            } else if (shopeingabe.equals("Tassen")) {
+                Tassen.displayAttributesShop();
+            } else if (shopeingabe.equals("Streichelzoofutter")) {
+                Streichelzoofutter.displayAttributesShop();
+            }
+        }else {
+            System.out.printf("ok, Ciao!");
         }
+
     }
 }
