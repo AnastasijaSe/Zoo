@@ -32,6 +32,9 @@ public class Main {
         Futter Cihad = new Futter("Pflanzen","jung",false);
 
 
+        Tickets Normal = new Tickets("Normaler Preis", 8.0, 64);
+        Tickets Ermaessigt = new Tickets("Ermäßigter Preis (für Schüler, Studenten, Kinder)", 5.0, 79);
+
 
         ArrayList<Tiere> TierArray = new ArrayList<>();
 
@@ -59,22 +62,43 @@ public class Main {
         }
         System.out.println("Säugetieranzahl: "+Säugetieranzahl);
 
+
+        int Reptilienanzahl=0;
+
+        for(int i=0; i<TierArray.size(); i++){
+            if(TierArray.get(i).getArt().equals("Reptiel")){
+                Reptilienanzahl++;
+            }
+        }
+        System.out.println("Reptilienanzahl: "+Reptilienanzahl);
+
+
+
+
         ArrayList<Personal> PersonalArray = new ArrayList<>();
 
         PersonalArray.add(Person1);
         PersonalArray.add(Person2);
         PersonalArray.add(Person3);
 
-        for(Personal p : PersonalArray){
-            p.displayAttributesPersonal();
-        }
+        Scanner personscann = new Scanner(System.in);
+        System.out.println("\nMöchtest du die Personendaten von den Mitarbeitern einsehen? (ja, nein): ");
+        String personeingabe = personscann.next();
+        if(personeingabe.equals("ja")) {
+            for (Personal p : PersonalArray) {
+                p.displayAttributesPersonal();
+            }
 
-        PersonalArray.size();
-        System.out.println("\nInsgesamt gibt es: "+PersonalArray.size()+" Arbeiter");
+            PersonalArray.size();
+            System.out.println("\nInsgesamt gibt es: " + PersonalArray.size() + " Arbeiter");
+        }
+        else if(personscann.equals("nein")){
+            System.out.println("ok");
+        }
 
 
         Scanner futterscann = new Scanner(System.in);
-        System.out.println("Möchtest du den Fütterungsstand von einem Tier einsehen? (ja, nein): ");
+        System.out.println("\nMöchtest du den Fütterungsstand von einem Tier einsehen? (ja, nein): ");
         String eingabeFutter = futterscann.next();
         if(eingabeFutter.equals("nein")){
             System.out.println("Ok");
@@ -112,21 +136,24 @@ public class Main {
                 String eingabeTierName = futterscann.next();
                 if(eingabeTierName.equals("Cihad")){
                     Cihad.displayAttributesFutter();}
-                }
 
+}
+
+            ArrayList<Tickets> TicketsArray = new ArrayList<>();
+
+            TicketsArray.add(Normal);
+            TicketsArray.add(Ermaessigt);
+
+            Scanner ticketscann = new Scanner(System.in);
+            System.out.println("\nMöchtest du die Personendaten von den Mitarbeitern einsehen? (ja, nein): ");
+            String ticketeingabe = ticketscann.next();
+            if(ticketeingabe.equals("ja")) {
+            for(Tickets tk : TicketsArray){
+                tk.displayAttributesTickets();
+                Tickets.summeTickets += tk.getanzahlverkauf();
+            }
+            System.out.println("\nInsgesamt wurden "+Tickets.summeTickets+" verkauft");
+            }
+        }
     }
-}
-    ArrayList<Tickets> TicketsArray = new ArrayList<>();
-
-        TicketsArray.add(Normal);
-        TicketsArray.add(Ermaessigt);
-
-        for(Tickets tk : TicketsArray){
-        tk.displayAttributesTickets();
-        Tickets.summeTickets += tk.getanzahlverkauf();
-    }
-
-        System.out.println("\nInsgesamt wurden "+Tickets.summeTickets+" verkauft");
-}
-}
 }
