@@ -1,6 +1,5 @@
 public class Tiere {
     private String Typ;
-
     private String Name;
     private String Art;
     private int Anzahl;
@@ -8,7 +7,9 @@ public class Tiere {
     private double Gewicht;
 
 
-    private void setAttributes(String Art, int Anzahl, String Nahrung, double Gewicht) {
+    private void setAttributes(String Typ, String Name, String Art, int Anzahl, String Nahrung, double Gewicht) {
+        this.Typ = Typ;
+        this.Name = Name;
         this.Art = Art;
         this.Anzahl = Anzahl;
         this.Nahrung = Nahrung;
@@ -16,12 +17,30 @@ public class Tiere {
     }
 
     public void displayAttributes() {
+        System.out.println("Typ: " + Typ);
+        System.out.println("Name: " + Name);
         System.out.println("\nArt: " + Art);
         System.out.println("Anzahl: " + Anzahl);
         System.out.println("Nahrung?: " + Nahrung);
         System.out.println("Gewicht?: " + Gewicht);
     }
 
+
+
+    public void setTyp(String Typ) {
+        Typ = Typ;
+    }
+
+    public void getTyp(String Typ) {
+            Typ = Typ;
+    }
+    public void setName(String Name) {
+        Name = Name;
+    }
+
+    public void getName(String Name) {
+        Name = Name;
+    }
 
     public void setArt(String Art) {
         Art = Art;
@@ -52,7 +71,7 @@ public class Tiere {
     }
 
 
-    public Tiere(String Art, int Anzahl, String Nahrung, double Gewicht) {
-        setAttributes(Art, Anzahl, Nahrung, Gewicht);
+    public Tiere(String Typ, String Name, String Art, int Anzahl, String Nahrung, double Gewicht) {
+        setAttributes(Typ, Name, Art, Anzahl, Nahrung, Gewicht);
     }
 }
