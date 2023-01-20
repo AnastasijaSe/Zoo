@@ -21,6 +21,10 @@ public class Main {
         Tiere Ziege2 = new Tiere("Säugetier", "Emine", "Pflanzenfresser", 1, "Pflanzenfresser", 80);
 
 
+        Tickets Normal = new Tickets("Normaler Preis", 8.0, 64);
+
+        Tickets Ermaessigt = new Tickets("Ermäßigter Preis (für Schüler, Studenten, Kinder)", 5.0, 79);
+
         ArrayList<Tiere> TierArray = new ArrayList<>();
 
         TierArray.add(Loewe1);
@@ -60,5 +64,18 @@ public class Main {
         PersonalArray.size();
         System.out.println("\nInsgesamt gibt es: "+PersonalArray.size()+" Arbeiter");
 
+
+
+    ArrayList<Tickets> TicketsArray = new ArrayList<>();
+
+        TicketsArray.add(Normal);
+        TicketsArray.add(Ermaessigt);
+
+        for(Tickets tk : TicketsArray){
+        tk.displayAttributesTickets();
+        Tickets.summeTickets += tk.getanzahlverkauf();
     }
+
+        System.out.println("\nInsgesamt wurden "+Tickets.summeTickets+" verkauft");
+}
 }
