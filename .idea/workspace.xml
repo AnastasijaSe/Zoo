@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e90425-91ff-4fd7-b3a0-970a13a77ad9" name="Changes" comment="Inital Commit1">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+    <list default="true" id="e8e90425-91ff-4fd7-b3a0-970a13a77ad9" name="Changes" comment="nasticahnge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -83,12 +82,12 @@
       <option name="project" value="LOCAL" />
       <updated>1674209876579</updated>
     </task>
-    <task id="LOCAL-00006" summary="test">
-      <created>1674214266058</created>
+    <task id="LOCAL-00006" summary="nasticahnge">
+      <created>1674218921774</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1674214266058</updated>
+      <updated>1674218921774</updated>
     </task>
     <task id="LOCAL-00007" summary="update 13:09">
       <created>1674216574980</created>
@@ -97,7 +96,7 @@
       <option name="project" value="LOCAL" />
       <updated>1674216574980</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +116,7 @@
     <MESSAGE value="tier, pers" />
     <MESSAGE value="test" />
     <MESSAGE value="update 13:09" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 13:09" />
+    <MESSAGE value="nasticahnge" />
+    <option name="LAST_COMMIT_MESSAGE" value="nasticahnge" />
   </component>
 </project>
