@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,10 +33,6 @@ public class Main {
 
 
 
-        Tickets Normal = new Tickets("Normaler Preis", 8.0, 64);
-
-        Tickets Ermaessigt = new Tickets("Ermäßigter Preis (für Schüler, Studenten, Kinder)", 5.0, 79);
-
         ArrayList<Tiere> TierArray = new ArrayList<>();
 
         TierArray.add(Loewe1);
@@ -43,6 +40,7 @@ public class Main {
         TierArray.add(Schlange1);
         TierArray.add(Ziege1);
         TierArray.add(Ziege2);
+        TierArray.add(Pinguin1);
 
         for(Tiere t : TierArray){
             t.displayAttributes();
@@ -61,7 +59,6 @@ public class Main {
         }
         System.out.println("Säugetieranzahl: "+Säugetieranzahl);
 
-
         ArrayList<Personal> PersonalArray = new ArrayList<>();
 
         PersonalArray.add(Person1);
@@ -75,17 +72,61 @@ public class Main {
         PersonalArray.size();
         System.out.println("\nInsgesamt gibt es: "+PersonalArray.size()+" Arbeiter");
 
-        ArrayList<Tickets> TicketsArray = new ArrayList<>();
+
+        Scanner futterscann = new Scanner(System.in);
+        System.out.println("Möchtest du den Fütterungsstand von einem Tier einsehen? (ja, nein): ");
+        String eingabeFutter = futterscann.next();
+        if(eingabeFutter.equals("nein")){
+            System.out.println("Ok");
+        }
+        else if(eingabeFutter.equals("ja")){
+            System.out.println("Von welchem Tier Möchtest du den Fütterungsstandeinsehen? \n (Löwe, Ziege, Schlange, Pinguin): ");
+            String eingabeTier = futterscann.next();
+            if(eingabeTier.equals("Löwe")){
+                System.out.printf("Wähle Löwe nach Name aus (Azra, Rolle): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Azra")){
+                    Azra.displayAttributesFutter();}
+                else if(eingabeTierName.equals("Rolle")){
+                        Rolle.displayAttributesFutter();
+                }
+            }
+            if(eingabeTier.equals("Schlange")){
+                System.out.printf("Wähle Schlange nach Name aus (Ronja): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Ronja")){
+                    Ronja.displayAttributesFutter();
+                }
+            }
+            if(eingabeTier.equals("Ziege")){
+                System.out.printf("Wähle Ziege nach Name aus (Sandra, Eminen): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Sandra")){
+                    Sandra.displayAttributesFutter();}
+                else if(eingabeTierName.equals("Eminen")){
+                    Eminen.displayAttributesFutter();
+                }
+        }
+            if(eingabeTier.equals("Pinguin")){
+                System.out.printf("Wähle Pinguin nach Name aus (Cihad): ");
+                String eingabeTierName = futterscann.next();
+                if(eingabeTierName.equals("Cihad")){
+                    Cihad.displayAttributesFutter();}
+                }
+
+    }
+}
+    ArrayList<Tickets> TicketsArray = new ArrayList<>();
 
         TicketsArray.add(Normal);
         TicketsArray.add(Ermaessigt);
 
         for(Tickets tk : TicketsArray){
-            tk.displayAttributesTickets();
-            Tickets.summeTickets += tk.getanzahlverkauf();
-        }
+        tk.displayAttributesTickets();
+        Tickets.summeTickets += tk.getanzahlverkauf();
+    }
 
         System.out.println("\nInsgesamt wurden "+Tickets.summeTickets+" verkauft");
-    }
 }
-
+}
+}
