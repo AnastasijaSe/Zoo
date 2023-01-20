@@ -143,7 +143,7 @@ public class Main {
                 System.out.printf("Wähle Pinguin nach Name aus (Cihad): ");
                 String eingabeTierName = futterscann.next();
                 if(eingabeTierName.equals("Cihad")){
-                    Cihad.displayAttributesFutter();}
+                    Cihad.displayAttributesFutter();}}
 
 }
 
@@ -152,16 +152,30 @@ public class Main {
             TicketsArray.add(Normal);
             TicketsArray.add(Ermaessigt);
 
-            Scanner ticketscann = new Scanner(System.in);
-            System.out.println("\nMöchtest du die Personendaten von den Mitarbeitern einsehen? (ja, nein): ");
-            String ticketeingabe = ticketscann.next();
-            if(ticketeingabe.equals("ja")) {
-            for(Tickets tk : TicketsArray){
+        Scanner ticketPreis = new Scanner(System.in);
+        System.out.println("\nMöchtest du die Preise für die Tickets einsehen? (ja, nein): ");
+        String ticketpreis = ticketPreis.next();
+        if(ticketpreis.equals("ja")) {
+            for (Tickets tk : TicketsArray) {
                 tk.displayAttributesTickets();
-                Tickets.summeTickets += tk.getanzahlverkauf();
-            }
-            System.out.println("\nInsgesamt wurden "+Tickets.summeTickets+" verkauft");
+                Tickets.summeTickets += tk.getanzahlverkauf();}
+        }
+        else if(ticketpreis.equals("nein")){
+            System.out.println("ok");}
+
+
+            Scanner ticket2scann = new Scanner(System.in);
+            System.out.println("\nMöchtest du noch ein Ticket kaufen? (ja, nein): ");
+            String ticketkauf = ticket2scann.next();
+            if(ticketkauf.equals("ja")) {
+                Scanner ticketAnzahlscann = new Scanner(System.in);
+                System.out.println("\nWie viele Tickets möchtest du kaufen? : ");
+                int ticketanzahl = ticketAnzahlscann.nextInt();
+                Tickets.summeTickets=(Tickets.summeTickets+ticketanzahl);
+                System.out.println("Neue Summe von verkauften Tickets:"+Tickets.summeTickets);
+                }
+            else if(ticketkauf.equals("nein")){
+                System.out.println("ok");}
+
             }
         }
-    }
-}
