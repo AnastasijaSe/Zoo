@@ -75,5 +75,17 @@ public class Main {
         PersonalArray.size();
         System.out.println("\nInsgesamt gibt es: "+PersonalArray.size()+" Arbeiter");
 
+        ArrayList<Tickets> TicketsArray = new ArrayList<>();
+
+        TicketsArray.add(Normal);
+        TicketsArray.add(Ermaessigt);
+
+        for(Tickets tk : TicketsArray){
+            tk.displayAttributesTickets();
+            Tickets.summeTickets += tk.getanzahlverkauf();
+        }
+
+        System.out.println("\nInsgesamt wurden "+Tickets.summeTickets+" verkauft");
     }
 }
+

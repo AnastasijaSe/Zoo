@@ -4,6 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="e8e90425-91ff-4fd7-b3a0-970a13a77ad9" name="Changes" comment="update 13:09">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
     <list default="true" id="e8e90425-91ff-4fd7-b3a0-970a13a77ad9" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Futter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Futter.java" afterDir="false" />
@@ -82,6 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674209876579</updated>
     </task>
+    <task id="LOCAL-00006" summary="test">
+      <created>1674214266058</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674214266058</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update 13:09">
+      <created>1674216574980</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674216574980</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
@@ -101,6 +118,7 @@
     <MESSAGE value="Inital Commit1" />
     <MESSAGE value="tier, pers" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="update 13:09" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 13:09" />
   </component>
 </project>
