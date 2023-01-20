@@ -45,6 +45,10 @@ public class Main {
         TierArray.add(Ziege2);
         TierArray.add(Pinguin1);
 
+        Scanner tierscanner = new Scanner(System.in);
+        System.out.println("\nMöchtest du die Daten von den Tieren einsehen? (ja, nein): ");
+        String tiereingabe = tierscanner.next();
+        if(tiereingabe.equals("ja")) {
         for(Tiere t : TierArray){
             t.displayAttributes();
         }
@@ -70,7 +74,11 @@ public class Main {
                 Reptilienanzahl++;
             }
         }
-        System.out.println("Reptilienanzahl: "+Reptilienanzahl);
+        System.out.println("Reptilienanzahl: "+Reptilienanzahl);}
+
+        else if(tiereingabe.equals("nein")){
+            System.out.println("ok");
+        }
 
 
 
