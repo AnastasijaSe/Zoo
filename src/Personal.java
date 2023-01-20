@@ -1,30 +1,31 @@
 public class Personal {
 
-    private String VoT;
+    private int vt;
     private String namepersonal;
-    private double vollzeitgehalt;
-    private double teilzeitgehalt;
+    private String gehaltart;
+    private double gehaltmenge;
 
-    private void setAttributes(String vOT, String namepersonal, double vollzeitgehalt, double teilzeitgehalt) {
-        this.VoT = VoT;
+
+    private void setAttributesPersonal(int vt, String namepersonal, String gehaltart, double gehaltmenge) {
+        this.vt = vt;
         this.namepersonal = namepersonal;
-        this.vollzeitgehalt = vollzeitgehalt;
-        this.teilzeitgehalt = teilzeitgehalt;
+        this.gehaltart = gehaltart;
+        this.gehaltmenge = gehaltmenge;
     }
 
     public void displayAttributesPersonal() {
-        System.out.println("Vollzeit oder Teilzeit: " + VoT);
+        System.out.println("\nVollzeit oder Teilzeit: " + vt);
         System.out.println("Name: " + namepersonal);
-        System.out.println("Vollzeitgehalt: " + vollzeitgehalt);
-        System.out.println("Teilzeitgehalt: " + teilzeitgehalt);
+        System.out.println("Gehaltart: " + gehaltart);
+        System.out.println("Gehalt: " + gehaltmenge);
     }
 
-    public void setVoT(String VoT) {
-        VoT = VoT;
+    public void setvt(int vt) {
+        vt = vt;
     }
 
-    public void getVoT(String VoT) {
-        VoT = VoT;
+    public void getvt(int vt) {
+        vt = vt;
     }
 
 
@@ -36,22 +37,25 @@ public class Personal {
         namepersonal = namepersonal;
     }
 
-    public void setvollzeitgehalt(double vollzeitgehalt) {
-        VoT = VoT;
+    public void setgehaltart(String gehaltart) {
+        gehaltart = gehaltart;
     }
 
-    public void getvollzeitgehalt(double vollzeitgehalt) {
-        vollzeitgehalt = vollzeitgehalt;
+    public void getgehaltart(String gehaltart) {
+        gehaltart = gehaltart;
     }
 
-    public void setteilzeitgehalt(double teilzeitgehalt) {
-        teilzeitgehalt = teilzeitgehalt;
+    public void setgehaltmenge(double gehaltmenge) {
+        gehaltmenge = gehaltmenge;
     }
 
 
+    public Personal(int vt, String namepersonal, String gehaltart, double gehaltmenge) {
+        setAttributesPersonal(vt, namepersonal, gehaltart, gehaltmenge);
+    }
 
-    public void getteilzeitgehalt ( double teilzeitgehalt){
-        teilzeitgehalt = teilzeitgehalt;
+    public void getgehaltmenge(double gehaltmenge){
+        gehaltmenge = gehaltmenge;
     }
 
                    /* public static void main (String[]args){

@@ -3,6 +3,13 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        Personal Person1 = new Personal(1, "Nasti","Vollzeit",1000000.0);
+
+        Personal Person2 = new Personal(2, "Rosa","Teilzeit",10000.0);
+
+        Personal Person3 = new Personal(2, "Lea","Teilzeit",10000.0);
+
+
         Tiere Loewe1 = new Tiere("Löwe", "Azra", "Säugetier", 1, "Fleischfresser", 145.0);
 
         Tiere Loewe2 = new Tiere("Löwe", "Rolle", "Säugetier", 1, "Fleischfresser", 140.0);
@@ -11,7 +18,7 @@ public class Main {
 
         Tiere Ziege1 = new Tiere("Ziege", "Sandra", "Säugetier", 1, "Pflanzenfresser", 60);
 
-        Tiere Ziege2 = new Tiere("Säugetier", "Eminen", "Pflanzenfresser", 1, "Pflanzenfresser", 80);
+        Tiere Ziege2 = new Tiere("Säugetier", "Emine", "Pflanzenfresser", 1, "Pflanzenfresser", 80);
 
 
         ArrayList<Tiere> TierArray = new ArrayList<>();
@@ -40,7 +47,18 @@ public class Main {
         System.out.println("Säugetieranzahl: "+Säugetieranzahl);
 
 
+        ArrayList<Personal> PersonalArray = new ArrayList<>();
 
+        PersonalArray.add(Person1);
+        PersonalArray.add(Person2);
+        PersonalArray.add(Person3);
+
+        for(Personal p : PersonalArray){
+            p.displayAttributesPersonal();
+        }
+
+        PersonalArray.size();
+        System.out.println("\nInsgesamt gibt es: "+PersonalArray.size()+" Arbeiter");
 
     }
 }
