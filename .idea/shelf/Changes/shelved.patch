@@ -1,0 +1,45 @@
+Index: src/Futter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Futter {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Futter.java b/src/Futter.java
+--- a/src/Futter.java	(revision db208fbe08b39b60807abc73eba36c30c014ff50)
++++ b/src/Futter.java	(date 1674209924661)
+@@ -1,2 +1,34 @@
+ public class Futter {
++
++    private int vt;
++    private String namepersonal;
++    private String gehaltart;
++    private double gehaltmenge;
++
++
++    private void setAttributesPersonal(int vt, String namepersonal, String gehaltart, double gehaltmenge) {
++        this.vt = vt;
++        this.namepersonal = namepersonal;
++        this.gehaltart = gehaltart;
++        this.gehaltmenge = gehaltmenge;
++    }
++
++    public void displayAttributesPersonal() {
++        System.out.println("\nVollzeit oder Teilzeit: " + vt);
++        System.out.println("Name: " + namepersonal);
++        System.out.println("Gehaltart: " + gehaltart);
++        System.out.println("Gehalt: " + gehaltmenge);
++    }
++
++    public void setvt(int vt) {
++        vt = vt;
++    }
++
++    public void getvt(int vt) {
++        vt = vt;
++    }
++
++    public Personal(int vt, String namepersonal, String gehaltart, double gehaltmenge) {
++        setAttributesPersonal(vt, namepersonal, gehaltart, gehaltmenge);
++    }
+ }

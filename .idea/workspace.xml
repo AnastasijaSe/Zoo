@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e8e90425-91ff-4fd7-b3a0-970a13a77ad9" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tiere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Futter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Futter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674205436848</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1674209791204</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674209791204</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test">
+      <created>1674209876579</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674209876579</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,6 +99,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inital Commit" />
     <MESSAGE value="Inital Commit1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inital Commit1" />
+    <MESSAGE value="tier, pers" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
